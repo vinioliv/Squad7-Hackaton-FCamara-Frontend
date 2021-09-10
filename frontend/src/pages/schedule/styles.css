@@ -1,75 +1,174 @@
-h1{
- color: darkgray;
+h1 {
+  color: darkgray;
+}
+/*CALENDAR CSS INICIO */
+.react-calendar {
+  width: 100%;
+  max-width: 100%;
+  background: #5251a2;
+  border: 1px solid #a0a096;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
 }
 
-.react-calendar{
-    width: 100%;
-    max-width: 100%;
-    background: #5251A2;
-    border: 1px solid #a0a096;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.125em;
-}
-
-.react-calendar__month-view__days__day{
-    color: white !important;
-    height: 40px !important;
-    width: 40px !important;
+.react-calendar__month-view__days__day {
+  color: white !important;
+  height: 40px !important;
+  width: 40px !important;
 }
 
 .react-calendar__month-view__days__day--neighboringMonth {
-    color: #757575 !important
-  }
+  color: #757575 !important;
+}
 
-.react-calendar__navigation__label__labelText{
-    color: white !important;
+.react-calendar__navigation__label__labelText {
+  color: white !important;
 }
 
 .react-calendar__tile--active:enabled:hover,
 .react-calendar__tile--active:enabled:focus {
-  background: #5251A2 !important;
+  background: #5251a2 !important;
   border-radius: 80px !important;
 }
 
 .react-calendar__tile--now {
-    background: #5251A2;
-  }
-  .react-calendar__tile--now:enabled:hover,
-  .react-calendar__tile--now:enabled:focus {
-    background: #5251A2;
-  }
-
-.react-calendar__month-view__weekdays__weekday {
-    color: white !important;
-    text-decoration: none !important;
-    border:none !important;
-} 
-
- .react-calendar__navigation__arrow{
-     color: white;
- } 
-
- .react-calendar__tile--hasActive {
-    background: #5251A2 !important;
-    border-radius: 80px !important;
+  background: #5251a2;
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #5251a2;
 }
 
+.react-calendar__month-view__weekdays__weekday {
+  color: white !important;
+  text-decoration: none !important;
+  border: none !important;
+}
 
-  .react-calendar__tile--active abbr {
-    background: #FE662E !important;
-    border-radius: 50px !important;
-    padding: 11px 17px;
+.react-calendar__navigation__arrow {
+  color: white;
+}
 
+.react-calendar__tile--hasActive {
+  background: #5251a2 !important;
+  border-radius: 80px !important;
+}
+
+.react-calendar__tile--active abbr {
+  background: #fe662e !important;
+  border-radius: 50px !important;
+  padding: 11px 17px;
 }
 
 .react-calendar__tile--active {
-    background:#5251A2 
+  background: #5251a2;
 }
 
-.react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
-    background-color: #5251A2;
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #5251a2;
 }
 
-.react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus{
-    background-color: #5251A2;
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #5251a2;
+}
+
+.offices{
+  text-decoration: none;
+  width: 200px;
+  appearance: none;
+  background-image: url("../../assets/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position-y: 5px;
+
+  background-position-x: 180px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-left: 10px;
+  margin-top: 20px;
+  border: 0;
+  margin-left: 5px;
+  color: #8F8B8B ;
+}
+
+.button{
+  color:white;
+  border-radius: 10px;
+  width: 150px;
+  background-color: #fe662e;
+  display: flex;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+height: 40px;
+border:none;
+
+}
+.container-section{
+  float: left;
+}
+.progress-bar{
+  float: left;
+}
+
+.text-schedule{
+  flex: 1;
+  float: none;
+  margin-top: 50px;
+   max-width: 50%;
+   margin-left: 50%;
+   height: 220px;
+  }
+  h4{
+  margin-top: 40px;
+  text-align: center;
+  float: none;
+
+}
+
+  
+.tips{
+display: flex;
+justify-content: center;
+}
+
+
+ul{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+p{
+  color:#595555
+}
+
+
+
+
+/*CALENDAR CSS FIM */
+
+@media (max-width:767px){
+  .progress-bar {
+    margin-top: 30px;
+    width: 40%;
+    color: orange;
+    background-color: transparent;
+    visibility: visible;
+  }
+  .progress-bar-visible {
+  }
+}
+
+@media  (min-width: 768px)  {
+  .progress-bar {
+    width: 40%;
+    color: orange;
+    background-color: transparent;
+  }
 }
