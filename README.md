@@ -35,7 +35,10 @@ DB_PASS=root
 
 ## 4) Iniciar o script de criação do banco
 
+```
 yarn typeorm migration:run
+
+```
 
 ## 5) Iniciar o projeto
 
