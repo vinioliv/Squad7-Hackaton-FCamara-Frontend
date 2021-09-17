@@ -28,8 +28,7 @@ npm install
 ## 3) Iniciar o projeto
 
 ```
-yarn dev
-
+npm start
 ```
 ## Tecnologias Utilizadas
 
