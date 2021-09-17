@@ -48,4 +48,4 @@ Trello Squad#7: https://trello.com/b/vFAOM8K4/squad7-hackaton-fcamara
 
 Link Documentation: https://www.postman.com/viniolivv/workspace/hackaton-squad-7/overview 
 
-Repositório FrontEnd: https://github.com/vinioliv/Squad7-Hackaton-FCamara-Backend
+Repositório Backend: https://github.com/vinioliv/Squad7-Hackaton-FCamara-Backend
