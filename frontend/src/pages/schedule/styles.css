@@ -6,7 +6,7 @@ h1 {
   width: 100%;
   max-width: 100%;
   background: #5251a2;
-  border: 1px solid #a0a096;
+  border: 0px solid !important;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.125em;
 }
@@ -57,7 +57,9 @@ h1 {
 .react-calendar__tile--active abbr {
   background: #fe662e !important;
   border-radius: 50px !important;
-  padding: 11px 17px;
+  /* padding: 11px 17px;
+  width: 20px;
+  height: 20px; */
 }
 
 .react-calendar__tile--active {
@@ -74,7 +76,42 @@ h1 {
   background-color: #5251a2;
 }
 
-.offices{
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: transparent !important;
+}
+
+/* background ranger disabled */
+.react-calendar__tile:disabled {
+  background: transparent !important;
+  padding: 11px 17px;
+}
+
+.react-calendar__month-view__days__day:disabled abbr {
+  /* background: grey  !important;
+  border-radius: 50% !important;
+  padding: 11px 17px; */
+
+  z-index: 2 !important;
+}
+
+.react-calendar__month-view__days__day:disabled abbr::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+  opacity: 0.5;
+  position: absolute;
+  border-radius: 50%;
+  margin-left: -1px;
+}
+
+.react-calendar__navigation button[disabled] {
+  background-color: transparent !important;
+}
+
+/*CALENDAR CSS FIM */
+
+.offices {
   text-decoration: none;
   width: 200px;
   appearance: none;
@@ -89,11 +126,11 @@ h1 {
   margin-top: 20px;
   border: 0;
   margin-left: 5px;
-  color: #8F8B8B ;
+  color: #8f8b8b;
 }
 
-.button{
-  color:white;
+.button {
+  color: white;
   border-radius: 10px;
   width: 150px;
   background-color: #fe662e;
@@ -101,60 +138,119 @@ h1 {
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-height: 40px;
-border:none;
-
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: none;
 }
-.container-section{
+.container-section {
   float: left;
 }
-.progress-bar{
+.progress-bar {
   float: left;
 }
 
-.text-schedule{
+.text-schedule {
   flex: 1;
   float: none;
   margin-top: 50px;
-   max-width: 50%;
-   margin-left: 50%;
-   height: 220px;
-  }
-  h4{
+  max-width: 50%;
+  margin-left: 50%;
+  height: 220px;
+}
+
+.div-progress-bar {
+  float: left;
+}
+
+h4 {
   margin-top: 40px;
   text-align: center;
   float: none;
-
 }
 
-  
-.tips{
-display: flex;
-justify-content: center;
+.tips {
+  display: flex;
+  justify-content: center;
 }
 
-
-ul{
+ul {
   margin-right: auto;
   margin-left: auto;
 }
 
-
-
-p{
-  color:#595555
+p {
+  color: #595555;
+  font-size: 18px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.legends-text {
+  color: #ffffff;
+  padding-left: 30px;
+  margin: 0;
+}
 
+.legends {
+  width: 100%;
+  max-width: 100%;
+  background-color: #5251a2;
+  display: flex;
 
+  text-align: center;
+  margin: 0;
+  height: 100px;
+}
 
-/*CALENDAR CSS FIM */
+.legends-selected {
+  margin: 0;
+  margin-left: 5%;
+  margin-top: 20px;
+}
+.circle-orange {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fe662e;
+}
 
-@media (max-width:767px){
-  .progress-bar {
+.legends-scheduled {
+  margin-left: 30%;
+  margin-top: 20px;
+}
+.circle-green {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3fe78c;
+}
+
+.legends-unavailable {
+  margin-left: 25%;
+  margin-top: 20px;
+}
+.circle-gray {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}
+
+.scheduled abbr {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #3fe78c;
+}
+
+h2 {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .div-progress-bar {
     margin-top: 30px;
     width: 40%;
     color: orange;
@@ -162,13 +258,135 @@ p{
     visibility: visible;
   }
   .progress-bar-visible {
+    visibility: visible;
+  }
+  .progress-bar {
+    visibility: hidden;
+  }
+  .text-schedule {
+    visibility: hidden;
+  }
+  .text-schedule-visible {
+    visibility: visible;
+    flex: 1;
+    float: none;
+    margin-top: 50px;
+    max-width: 50%;
+    margin-left: 50%;
+    height: 220px;
+  }
+
+  .meeting-img {
+    display: none;
+  }
+  .p-office {
+    display: none;
   }
 }
 
-@media  (min-width: 768px)  {
+@media (min-width: 768px) {
+  .react-calendar {
+    margin-top: 50px;
+    background: #5251a2;
+    border: 0px solid !important;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+  }
+  .container-section {
+    width: 50%;
+    max-width: 100%;
+    display: flexbox;
+    flex-direction: row;
+  }
+  .progress-bar-visible {
+    background-color: red;
+    visibility: visible;
+    display: flex;
+  }
+  .div-progress-bar {
+    margin-top: 30px;
+    width: 40%;
+    color: orange;
+    background-color: transparent;
+    visibility: visible;
+  }
+  .legends {
+    background-color: #5251a2;
+    display: flex;
+    text-align: center;
+    margin: 0;
+    height: 100px;
+  }
+
+  .container-offices {
+    background-color: #5251a2;
+    height: 420px;
+  }
+
+  .progress-bar-visible {
+    background-color: transparent;
+    width: 100%;
+  }
+  .content-calendar {
+    background-color: #5251a2;
+  }
+
+  .p-office {
+    display: visible;
+    color: #ffffff;
+    margin-left: 10px;
+  }
+  .offices {
+    margin-left: 10px;
+  }
   .progress-bar {
     width: 40%;
     color: orange;
     background-color: transparent;
+    display: none;
+  }
+
+  .text-schedule {
+    display: none;
+  }
+
+  .text-schedule-visible {
+    visibility: visible;
+    flex: 1;
+    float: none;
+    margin-top: 50px;
+    max-width: 50%;
+    margin-left: 50%;
+    height: 220px;
+  }
+
+  .col-12 {
+    display: flex;
+    margin: 0;
+  }
+
+  .div-img {
+    text-align: center;
+   
+  }
+  .div-img-invisible {
+    visibility: hidden;
+  }
+  .meeting-img {
+    max-width: 100%;
+    text-align: center;
+ 
+  }
+
+  h4 {
+    margin-top: 0px;
+  }
+  h2 {
+    margin-top: 50px;
+    color: #535252;
+  }
+
+  .button {
+    margin-top: 0px;
   }
 }
