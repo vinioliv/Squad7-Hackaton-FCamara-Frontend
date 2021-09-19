@@ -34,15 +34,12 @@ npm start
 
 
 
-**Back-end: React.Js**
-
+**Frontend: React.Js**
 
 
 ## Links
 
 Protótipo UX do projeto: https://www.figma.com/file/qnjeRM6oO5TG8xgXUWYsRs/telas-squad-07?node-id=49%3A5
-
-Conteúdo UX do projeto: https://drive.google.com/drive/folders/1kAmIa0hBwNxK8VWX9mY24Nv5E7FP8MEm
 
 Trello Squad#7: https://trello.com/b/vFAOM8K4/squad7-hackaton-fcamara
 
